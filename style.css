@@ -1,0 +1,495 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    font-size: clamp(0.89rem, 1vw, 1.125rem);
+    font-family: "public sans";
+    overflow-X: hidden;
+}
+.this-card-body small{
+    font-size: clamp(0.7rem, 0.8vw, 1.1rem);
+}
+.stop-scroll {
+    overflow: hidden;
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    background: linear-gradient(to bottom, hsl(233, 26%, 24%) 50%, hsl(233, 8%, 62%), hsl(0, 0%, 100%));
+}
+
+.show-overlay {
+    display: block;
+}
+
+/* **************************************** HEADER/NAVBAR STARTS HERE********************************************** */
+/* Nav Bar */
+.topnav {
+    padding: 1.25rem 0.625rem;
+    background-color: hsl(0, 0%, 100%);
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+.logo {
+    display: block;
+    margin: 11px 0;
+}
+
+.harmburger {
+    display: none;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.rotate45 {
+    transform: rotate(45deg) translateY(5px);
+    transition: ease-in .2s;
+}
+
+.delete {
+    display: none;
+    transition: ease-in .2s;
+}
+
+.rotate-45 {
+    transform: rotate(-45deg) translateY(-5px);
+    transition: ease-in .2s;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    padding: 1px;
+    margin: 5px auto;
+    background-color: #000;
+    width: 20px;
+    transition: ease-in .2s;
+}
+
+.topnav1,
+.topnav2,
+.topnav3 {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.topnav1 {
+    position: relative;
+}
+
+.topnav2-mid {
+    margin: 9px auto;
+    padding: 0;
+    width: 100%;
+    display: block;
+    text-align: center;
+
+}
+
+.topnav2-mid-elements {
+    display: inline-block;
+    margin: 0;
+    margin: 0 10px;
+}
+
+p {
+    color: hsl(233, 8%, 62%);
+}
+
+.topnav2-mid-elements a {
+    text-decoration: none;
+    color: hsl(233, 8%, 62%);
+}
+
+.topnav2-mid-elements a:hover {
+    padding-bottom: 28px;
+    border-width: 5px;
+    color: hsl(233, 26%, 24%);
+    border-style: solid;
+    border-image: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%))0 0 100%;
+}
+
+.topnav3 {
+    text-align: right;
+}
+
+.rbutton {
+    border: hsl(233, 8%, 62%);
+    margin: 2px auto;
+    border-radius: 30px;
+    padding: 8px 25px;
+    font-weight: bold;
+    color: hsl(0, 0%, 100%);
+    background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+}
+
+.rbutton:hover {
+    color: hsl(0, 0%, 100%);
+    opacity: 0.8;
+}
+
+@media only screen and (max-width: 992px) {
+    .topnav2-mid {
+        display: none;
+    }
+
+    .harmburger {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav1 {
+        text-align: left;
+    }
+
+    .topnav2 {
+        position: relative;
+    }
+
+    .topnav2-mid {
+        position: absolute;
+        top: 25px;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 5px;
+    }
+
+    .topnav2-mid-elements {
+        display: list-item;
+        list-style-type: none;
+        list-style: none;
+    }
+
+    .topnav2-mid-elements a {
+        color: hsl(233, 26%, 24%);
+        padding: 10px 0;
+        margin: 0;
+        display: inline-block;
+    }
+
+    .topnav2-mid-elements a:hover {
+        padding: 10px 0;
+        border: none;
+        font-weight: bold;
+    }
+
+    .topnav3 {
+        display: none;
+    }
+}
+
+/* ************************************HEADER/NAVBAR ENDS HERE****************************************** */
+
+
+
+/* ############################################ INTRO STARTS HERE ############################################## */
+.intro {
+    background-color: hsl(0, 0%, 98%);
+
+}
+
+.phone-background {
+    position: absolute;
+    transform: translateY(-165px) translateX(-60px);
+}
+
+.phone {
+    
+    transform: translateX(100px) translateY(-25px);
+}
+
+.intro-writeup {
+    padding: 0 0 11vw 0;
+}
+
+.intro-writeup h1 {
+    font-size: calc(39px + 1vw);
+    margin-top: 22vw;
+}
+
+.intro-writeup p {
+    margin: 40px 0;
+}
+
+@media only screen and (max-width:992px) {
+    .phone-background {
+        display: none;
+    }
+    .intro-writeup h1 {
+        font-size: 55px;
+        margin-top: -10vw;
+    }
+
+    .phone {
+        width: 115%;
+        /* position: static; */
+        position: relative;
+        display: inline-block;
+        /* width: 52%; */
+        top: -19vw;
+        left: -18vw;
+    }
+    .intro{
+        text-align: center;
+        background-image: url("images/bg-intro-mobile.svg");
+        background-repeat: no-repeat;
+        background-position-x: 0;
+        background-position-y: 0;
+        background-position: center -8vw;
+        background-size: 100%;
+
+    }
+}
+@media only screen and (max-width:768px){
+    .intro-writeup h1 {
+        font-size: 55px;
+        margin-top: 100vw;
+    }
+    .phone {
+        width: 80%;
+        /* position: static; */
+        position: absolute;
+        display: inline;
+        /* width: 52%; */
+        top: -5vw;
+        left: -10vw;
+    }
+}
+
+
+
+/* mid-body section */
+.why-easybank {
+    background-color: hsl(220, 16%, 96%);
+    padding: 100px 0;
+}
+
+.easybank-heading {
+    margin-bottom: 20px;
+    color: hsl(233, 26%, 24%);
+}
+
+.easybank-heading-text {
+    width: 600px;
+    margin: 30px 0;
+}
+
+.why-easybank-row {
+    padding: 50px 0 0 0;
+}
+
+h3,
+h1,
+h2 {
+    margin: 30px 0;
+    color: hsl(233, 26%, 24%);
+}
+
+@media only screen and (max-width:992px) {
+    .why-easybank .container {
+        text-align: center;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .easybank-heading-text {
+        width: 100%;
+        padding: 0 35px;
+
+    }
+
+    .easybank-heading {
+        padding: 0 35px;
+    }
+
+    .why-easybank-divisions {
+        margin: 20px 0;
+        padding: 0 35px;
+    }
+}
+
+
+
+/* LATEST */
+.latest-section {
+    background-color: hsl(0, 0%, 98%);
+    padding: 100px 0;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.list-card-group {
+    margin-top: 50px
+}
+
+small {
+    color: hsl(233, 8%, 62%);
+}
+
+.card-container {
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+    box-shadow: 0 0 2px 0.1px hsl(0, 0%, 95%);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.this-card-body {
+    padding: 30px 20px;
+}
+
+.card-text .latest-link {
+    font-size: 15px;
+}
+
+
+.latest-card-image {
+    display: block;
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.latest-link {
+    color: hsl(233, 26%, 24%);
+    display: block;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: larger;
+}
+
+.latest-link:hover {
+    color: hsl(136, 65%, 51%);
+}
+
+@media only screen and (max-width: 992px) {
+    .latest-section .container {
+        padding: 0 70px;
+    }
+
+    .card-text .latest-link {
+        font-size: 1.1rem;
+    }
+
+    .latest-section .container h2 {
+        text-align: center;
+    }
+
+    .latest-card-image {
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .latest-section .container {
+        padding: 0 30px;
+    }
+    .card-text .latest-link {
+        font-size: 1.5rem;
+    }
+
+    .latest-card-image {
+        height: 280px;
+    }
+}
+
+
+
+/* Footer */
+.footer {
+    background-color: hsl(233, 26%, 24%);
+    padding: 50px 0;
+}
+
+.divisions ul {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.divisions ul a {
+    display: block;
+}
+
+.divisions ul li {
+    padding: 10px 0;
+    list-style: none;
+}
+
+.special li:nth-child(1) {
+    padding: 2px;
+}
+
+.divisions ul li a.social-links {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.svg {
+    fill: white;
+}
+
+.svg:hover {
+    fill: hsl(136, 65%, 51%);
+}
+
+.footer-links {
+    text-decoration: none;
+    color: hsl(220, 16%, 96%);
+}
+
+.footer-links:hover {
+    color: hsl(136, 65%, 51%);
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.special {
+    text-align: right;
+}
+
+.bottom-button {
+    margin: 0;
+}
+
+.copyright {
+    color: hsl(233, 8%, 62%);
+}
+
+@media only screen and (max-width: 992px) {
+
+    .footer,
+    .special {
+        text-align: center;
+    }
+
+    .divisions ul li a {
+        display: inline-block;
+    }
+}
